@@ -59,8 +59,8 @@ export default function KochuaUnionMap() {
               </h1>
 
               <p className="mt-2 max-w-2xl text-sm text-slate-600">
-                Hover করলে ইউনিয়নের <span className="font-semibold">Total voter</span> দেখাবে।
-                Click করলে <span className="font-semibold">A/B/C voter</span> সহ বিস্তারিত খুলবে।
+                Hover করলে ইউনিয়নের <span className="font-semibold">Total voter</span> দেখবেন।
+                ইউনিয়নের উপর Click করলে <span className="font-semibold">A/B/C voter</span> সহ বিস্তারিত দেখতে পাবেন.
               </p>
             </div>
 
