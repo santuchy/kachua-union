@@ -12,8 +12,8 @@ const UNION_COLORS = [
 const GROUP_COLORS = { A: "#4d96ff", B: "#6bcb77", C: "#ff6b6b" };
 
 export default function KochuaUnionMap() {
-  const [hover, setHover] = useState(null); // {id, x, y}
-  const [selected, setSelected] = useState(null); // union id
+  const [hover, setHover] = useState(null);
+  const [selected, setSelected] = useState(null);
 
   const colorById = useMemo(() => {
     const m = {};
@@ -24,7 +24,7 @@ export default function KochuaUnionMap() {
   const selectedUnion = selected ? unions.find((u) => u.id === selected) : null;
   const s = selected ? voterStats[selected] : null;
 
-  // Summary stats (landing page feel)
+  // Summary stats
   const totals = useMemo(() => {
     let totalVoter = 0;
     let a = 0, b = 0, c = 0;
@@ -44,7 +44,7 @@ export default function KochuaUnionMap() {
 
   return (
     <div className="relative">
-      {/* ===== Header / Hero ===== */}
+      {/* ===== Hero ===== */}
       <div className="mb-4 overflow-hidden rounded-2xl border bg-gradient-to-br from-slate-50 via-white to-slate-50">
         <div className="p-5 sm:p-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
@@ -362,10 +362,7 @@ function LegendPill({ label, color }) {
   );
 }
 
-/**
- * Demo paths: এগুলো placeholder।
- * পরে তুমি Inkscape/Figma থেকে “real union boundaries” SVG path বসিয়ে দিলেই হবে।
- */
+
 const demoUnionPaths = [
   { id: "pathair", d: "M85,90 L190,80 L205,140 L105,155 Z" },
   { id: "bitara", d: "M190,80 L285,95 L270,160 L205,140 Z" },
